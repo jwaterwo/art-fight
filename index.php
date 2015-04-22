@@ -11,8 +11,6 @@
     <body>
 
         Body text goes here!
-	<p>
-	I love Kelsey person THIS MUCH!!!
 
     </body>
 </html>>
