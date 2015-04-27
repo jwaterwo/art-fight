@@ -7,6 +7,8 @@
         <title>art-fight</title>
     </head>
     <body>
-      art-fight goes here.
+        <center>
+        <img src="artfight.png" alt="art-fight goes here" />
+        </center> 
     </body>
 </html>
