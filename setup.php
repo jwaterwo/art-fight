@@ -1,21 +1,38 @@
 <?php
     // this will be used to setup/modify the mysql database, and the main admin user
     
-    //temp line. this should be removed
-    echo "if you are seeing this page, art-fight has not been setup correctly";
-
-    // load up any existing values
-    if (file_exists(mysql-cfg.php)) {
-        $mysql = include 'mysql-cfg.php';
+    // if we have created our configs, we souldnt be accessing this page
+    if (file_exists("mysql-cfg.php")) {
+        header('Location: index.php');
+	die;
     }
 
-    // a form to SET the volumes shoudl be created here, and display the pulled values (if they exist)
-    /*
-    $mysql['hostname']
-    $mysql['username']
-    $mysql['password']
-    $mysql['database']
-    */
+?>
+
+<center>
+    <img src="artfight.png" alt="art-fight goes here" />
+    <p/>
+    <b>Welcome to the Art-Fight setup page.</b>
+    <br/>
+    Please fill out the below details to get started.
+    <p/>
+    <table>
+        <form>
+            <tr><td>MySQL Server Details</td></tr>
+            <tr><td><input type="text" name="hostname" placeholder="hostname"/></td></tr>
+            <tr><td><input type="text" name="username" placeholder="username"/></td></tr>
+            <tr><td><input type="text" name="password" placeholder="password"/></td></tr>
+            <tr><td><input type="submit" value="Submit"></td></tr>
+        </form>
+    </table>
+    Need help? Read <a href="https://github.com/jwaterwo/art-fight">this page</a>
+</center>
+  
+
+<?php
+
+    // mysql command to create db:
+    // CREATE DATABASE menagerie;
 
     /* current hiding this, but eventually we'll need to setup a forum with the values from the below 
     // set the mysql variables from the form

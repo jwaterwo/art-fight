@@ -9,14 +9,11 @@
         header('Location: setup.php');
     }
 
-    // here are some example entires. we'll need some way to determine if they are "not set up" so we can redirect
-    $hostname=$mysql['hostname'];
-    $username=$mysql['username'];
-    $password=$mysql['password'];
-    $database=$mysql['database']; // this will need to be unique per instance of art-fight
-
     //connect to mysql database
-    mysql_connect($hostname,$username,$password);
-    @mysql_select_db($database) or die( "Unable to select database");
+    mysql_connect($mysql['hostname'],$mysql['username'],$mysql['password']);
+    @mysql_select_db($mysql['database']) or die( "Unable to select database");
+
+    // remove this variables so they cant be printed later
+    unset($mysql);
 ?>
 
