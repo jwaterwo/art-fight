@@ -1,6 +1,8 @@
+
+<!DOCTYPE html>
 <html>
 	<head>
-		<title>FAQ</title>
+		<title>Teams</title>
     		<link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
     		<link rel="stylesheet" href="main.css">
 	</head>
@@ -23,15 +25,16 @@
       <div class="container">
         <h1>Art Fight 2015</h1>
 	        <p>Two Weeks. Two Teams. One Winner.</p>
-	        <a href="about.php">Learn More</a>
+	        <a href="/about.php">Learn More</a>
       </div>
    </div> 
 
     <div class="guides">
         <div class="container">
-   	    <h2> FAQ GOES HERE</h2>
+   	    <h2>Here is where we will vote from the top 3 team choices</h2>
+               
     </div>
-         <div class="learn-more">
+    <div class="learn-more">
 	  <div class="container">
 		<div class="row">
 	      <div class="col-md-4">
@@ -54,3 +57,4 @@
 	</div>
 	</body>
 </html>
+

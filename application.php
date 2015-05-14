@@ -14,7 +14,7 @@
       <div class="container">
         <ul class="pull-left">
           <li><a href="/index_kelsey.php">Home</a></li>
-          <li><a href="#">About</a></li>
+          <li><a href="/about.php">About</a></li>
         </ul>
         <ul class="pull-right">
           <li><a href="#">Register</a></li>
@@ -28,7 +28,7 @@
       <div class="container">
         <h1>Art Fight 2015</h1>
 	        <p>Two Weeks. Two Teams. One Winner.</p>
-	        <a href="#">Learn More</a>
+	        <a href="/about.php">Learn More</a>
       </div>
    </div> 
 
@@ -68,7 +68,7 @@ Tell us why you would like to help...
 	      <div class="col-md-4">
 			<h3>Teams</h3>
 				<p>Help us decide on this years teams!</p>
-				<p><a href="#">vote on teams for 2015</a></p>
+				<p><a href="/poll.php">vote on teams for 2015</a></p>
 	      </div>
 		 <div class="col-md-4">
 			<h3>Oppurtunities</h3>
