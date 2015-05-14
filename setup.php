@@ -27,7 +27,12 @@
     /* check to see which step we are on and then 
        take the appropriate actions 
     */
-    switch (htmlspecialchars($_POST["step"])) {
+    if ( empty($_POST["step"]) ){
+        $STEP = "0";
+    }else{
+        $STEP = htmlspecialchars($_POST["step"]);
+    }
+    switch ($STEP) {
         case 1:
             // step one is setting up the mysql database
 
@@ -37,17 +42,19 @@
                password.
                if fail, set an error. else, move on
             */
-            $STEP = "0";
             if ( empty($_POST["hostname"]) ) {
                 $ERROR="You did not enter a <b>hostname</b>.";
+                $STEP = "0";
                 break;
             }
             if ( empty($_POST["username"]) ) {
                 $ERROR="You did not enter a <b>username</b>.";
+                $STEP = "0";
                 break;
             }
             if ( empty($_POST["password"]) ) {
                 $ERROR="You did not enter a <b>password</b>.";
+                $STEP = "0";
                 break;
             }
 
@@ -59,13 +66,12 @@
             $conn = mysqli_connect($_POST["hostname"], $_POST["username"], $_POST["password"]);
             if (!$conn) {
                 $ERROR="We were unable to <b>connect</b> to the database.";
+                $STEP = "0";
                 break;
             }else{
                 $NOTICE="Connection to database <b>successfull</b>!";
             }
-
-            // Set the step to 1 so we can show the next page
-            $STEP = "1";
+            mysqli_close($conn);
             break;
 
         case 2:
@@ -101,12 +107,35 @@
         <div class="setup_box">
             <table>
                 <form action="setup.php" method="POST">
+<?php
+    /* Show different stuff in the table depending
+       on which step we are currently on.
+    */
+
+    switch($STEP) {
+        case "0":
+            // this shows step 0 (mysql details)
+            ?>
                     <tr><td>MySQL Server Details</td></tr>
                     <tr><td><input type="text" name="hostname" placeholder="hostname"/></td></tr>
                     <tr><td><input type="text" name="username" placeholder="username"/></td></tr>
                     <tr><td><input type="password" name="password" placeholder="password"/></td></tr>
                     <tr><td><input type="submit" value="Submit"></td></tr>
                     <input type="hidden" name="step" value="1"/>
+            <?php
+            break;
+
+        case "1":
+            // this shows step 2 (database details)
+            ?>
+                    <tr><td>Create a New Database</td></tr>
+                    <tr><td><input type="text" name="database" placeholder="database name" value="artfight<?php echo rand(1000,9999); ?>"/></td></tr>
+                    <tr><td><input type="submit" value="Submit"></td></tr>
+                    <input type="hidden" name="step" value="2"/>
+            <?php
+            break;
+    }
+?>
                 </form>
             </table>
             Need help? Read <a href="https://github.com/jwaterwo/art-fight">this page</a>

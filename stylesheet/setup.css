@@ -37,6 +37,7 @@ img.banner {
     font-size:12px;
     padding:4px 2px;
     border:solid 1px black;
+    text-align: center;
 }
 
 .error {
