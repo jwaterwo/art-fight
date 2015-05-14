@@ -9,6 +9,13 @@
 
 ?>
 
+<html>
+    <head>
+        <link rel="stylesheet" href="stylesheet/setup.css">
+    </head>
+
+   <body>
+
 <center>
     <img src="artfight.png" alt="art-fight goes here" />
     <p/>
@@ -27,6 +34,9 @@
     </table>
     Need help? Read <a href="https://github.com/jwaterwo/art-fight">this page</a>
 </center>
+
+    </body>
+</html>
   
 
 <?php
