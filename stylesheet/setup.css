@@ -38,3 +38,14 @@ img.banner {
     padding:4px 2px;
     border:solid 1px black;
 }
+
+.error {
+    margin-right: auto;
+    margin-left: auto;
+    width: 400px;
+    text-align: center;
+    border: thin solid black;
+    margin-bottom:20px;
+    padding: 10px;
+    background-color:#f49797;
+}

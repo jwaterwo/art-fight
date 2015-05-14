@@ -20,7 +20,9 @@
         <p/>
 
 <?php
-    // lets determine what we are going to show on this page
+    /* lets determine what we are going to show on this page.
+       do not actually set up anything until the final step.
+    */
 
     /* check to see which step we are on and then 
        take the appropriate actions 
@@ -33,14 +35,25 @@
                just incase we get a submit with a blank
                variable for hostname, username, or
                password.
-
                if fail, set an error. else, move on
             */
+            $STEP = "0";
+            if ( empty($_POST["hostname"]) ) {
+                $ERROR="You did not enter a <b>hostname</b>.";
+                break;
+            }
+            if ( empty($_POST["username"]) ) {
+                $ERROR="You did not enter a <b>username</b>.";
+                break;
+            }
+            if ( empty($_POST["password"]) ) {
+                $ERROR="You did not enter a <b>password</b>.";
+                break;
+            }
 
-            */ we will need to check to see if the
+            /* we will need to check to see if the
                credentials actually work no the database
                at this point.
-
                if we fail, set an error, else, move on
             */
 
@@ -54,10 +67,6 @@
             $STEP = "0";
             break;
     }
-
-echo $STEP;
-
-
 ?>
 
         <div class="setup_text">
@@ -65,6 +74,15 @@ echo $STEP;
             <br/>
             Please fill out the below details to get started.
         </div>
+
+<?php
+    // show error box if ERROR is set
+    if ( isset($ERROR) ) {
+        echo '<div class="error">';
+        echo $ERROR;
+        echo '</div>';
+    }
+?>
 
         <div class="setup_box">
             <table>
