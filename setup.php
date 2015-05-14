@@ -19,6 +19,47 @@
         <img src="artfight.png" alt="art-fight goes here" class="banner" />
         <p/>
 
+<?php
+    // lets determine what we are going to show on this page
+
+    /* check to see which step we are on and then 
+       take the appropriate actions 
+    */
+    switch (htmlspecialchars($_POST["step"])) {
+        case 1:
+            // step one is setting up the mysql database
+
+            /* we need to add some error hanlding here
+               just incase we get a submit with a blank
+               variable for hostname, username, or
+               password.
+
+               if fail, set an error. else, move on
+            */
+
+            */ we will need to check to see if the
+               credentials actually work no the database
+               at this point.
+
+               if we fail, set an error, else, move on
+            */
+
+            // Set the step to 1 so we can show the next page
+            $STEP = "1";
+            break;
+
+        case 2:
+            break;
+        default:
+            $STEP = "0";
+            break;
+    }
+
+echo $STEP;
+
+
+?>
+
         <div class="setup_text">
             <b>Welcome to the Art-Fight setup page.</b>
             <br/>
@@ -27,12 +68,13 @@
 
         <div class="setup_box">
             <table>
-                <form>
+                <form action="setup.php" method="POST">
                     <tr><td>MySQL Server Details</td></tr>
                     <tr><td><input type="text" name="hostname" placeholder="hostname"/></td></tr>
                     <tr><td><input type="text" name="username" placeholder="username"/></td></tr>
                     <tr><td><input type="text" name="password" placeholder="password"/></td></tr>
                     <tr><td><input type="submit" value="Submit"></td></tr>
+                    <input type="hidden" name="step" value="1"/>
                 </form>
             </table>
             Need help? Read <a href="https://github.com/jwaterwo/art-fight">this page</a>
