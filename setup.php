@@ -148,6 +148,9 @@
             ?>
                     <tr><td>Create a New Database</td></tr>
                     <tr><td><input type="text" name="database" placeholder="database name" value="artfight<?php echo rand(1000,9999); ?>"/></td></tr>
+                    <tr><td>Create an Admin user</td></tr>
+                    <tr><td><input type="text" name="create_user" placeholder="username" value="admin"/></td></tr>
+                    <tr><td><input type="password" name="create_password" placeholder="password"/></td></tr>
             <?php
             break;
 
