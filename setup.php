@@ -7,6 +7,13 @@
 	die;
     }
 
+    /* we will need to start a session so that
+       we are able to pass variables between
+       page reloads (while the user is running
+       through the steps
+    */
+    session_start();
+
 ?>
 
 <html>
@@ -70,6 +77,17 @@
                 break;
             }else{
                 $NOTICE="Connection to database <b>successfull</b>!";
+
+                /* if we are executing this code it means that all
+                   the data the userprovided for the mysql
+                   database worked as expected!.  We should go
+                   ahead and save these "good" values in a session
+                   variable so they can be used at the end of the
+                   script
+                */
+                $_SESSION["hostname"] = $_POST["hostname"];
+                $_SESSION["username"] = $_POST["username"];
+                $_SESSION["password"] = $_POST["password"];
             }
             mysqli_close($conn);
             break;
@@ -120,22 +138,25 @@
                     <tr><td><input type="text" name="hostname" placeholder="hostname"/></td></tr>
                     <tr><td><input type="text" name="username" placeholder="username"/></td></tr>
                     <tr><td><input type="password" name="password" placeholder="password"/></td></tr>
-                    <tr><td><input type="submit" value="Submit"></td></tr>
-                    <input type="hidden" name="step" value="1"/>
             <?php
             break;
 
         case "1":
-            // this shows step 2 (database details)
+            // this shows step 1 (database details)
             ?>
                     <tr><td>Create a New Database</td></tr>
                     <tr><td><input type="text" name="database" placeholder="database name" value="artfight<?php echo rand(1000,9999); ?>"/></td></tr>
-                    <tr><td><input type="submit" value="Submit"></td></tr>
-                    <input type="hidden" name="step" value="2"/>
             <?php
+            break;
+
+        case "2":
+            // this shows step 2 (nothing yet)
+            echo "<tr><td>The hostname is ".$_SESSION["hostname"]."</td></tr>";
             break;
     }
 ?>
+                    <tr><td><input type="submit" value="Submit"></td></tr>
+                    <input type="hidden" name="step" value="<?php echo ++$STEP; ?>"/>
                 </form>
             </table>
             Need help? Read <a href="https://github.com/jwaterwo/art-fight">this page</a>
