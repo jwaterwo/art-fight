@@ -16,24 +16,24 @@
 
    <body>
 
-<center>
-    <img src="artfight.png" alt="art-fight goes here" />
-    <p/>
-    <b>Welcome to the Art-Fight setup page.</b>
-    <br/>
-    Please fill out the below details to get started.
-    <p/>
-    <table>
-        <form>
-            <tr><td>MySQL Server Details</td></tr>
-            <tr><td><input type="text" name="hostname" placeholder="hostname"/></td></tr>
-            <tr><td><input type="text" name="username" placeholder="username"/></td></tr>
-            <tr><td><input type="text" name="password" placeholder="password"/></td></tr>
-            <tr><td><input type="submit" value="Submit"></td></tr>
-        </form>
-    </table>
-    Need help? Read <a href="https://github.com/jwaterwo/art-fight">this page</a>
-</center>
+        <center>
+            <img src="artfight.png" alt="art-fight goes here" />
+            <p/>
+            <b>Welcome to the Art-Fight setup page.</b>
+            <br/>
+            Please fill out the below details to get started.
+            <p/>
+            <table>
+                <form>
+                    <tr><td>MySQL Server Details</td></tr>
+                    <tr><td><input type="text" name="hostname" placeholder="hostname"/></td></tr>
+                    <tr><td><input type="text" name="username" placeholder="username"/></td></tr>
+                    <tr><td><input type="text" name="password" placeholder="password"/></td></tr>
+                    <tr><td><input type="submit" value="Submit"></td></tr>
+                </form>
+            </table>
+            Need help? Read <a href="https://github.com/jwaterwo/art-fight">this page</a>
+        </center>
 
     </body>
 </html>
