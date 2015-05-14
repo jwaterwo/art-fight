@@ -78,7 +78,7 @@ Tell us why you would like to help...
 		  <div="col-md-4">
 			<h3>Rules and Regulations</h3>
 				<p>How to play the game, and a few simple rules</p>
-				<p><a href="#">Read the Guide</a></p>
+				<p><a href="/rules.php">Read the Guide</a></p>
 		  </div>
 	    </div>
 	  </div>

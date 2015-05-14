@@ -1,18 +1,13 @@
-<?php
-    // this is a PHP file, so lets make sure we have our open and close to build off of.
-    // please use 4 spaces for code spacing.
-?>
 
+<!DOCTYPE html>
 <html>
-
-  <head>
-    <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
-    <link rel="stylesheet" href="main.css">
-  </head>
-
-  <body>
-
-   <div class="nav">
+	<head>
+		<title>Rules & Regulations</title>
+    		<link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+    		<link rel="stylesheet" href="main.css">
+	</head>
+	<body>
+<div class="nav">
       <div class="container">
         <ul class="pull-left">
           <li><a href="/index_kelsey.php">Home</a></li>
@@ -36,31 +31,8 @@
 
     <div class="guides">
         <div class="container">
-   	    <h2>Past Attacks</h2>
-                 <p>Attacks from past years fights!
-       		 </p>
-    <div class="row">
-        <div class="col-md-4">
-            <div class="thumbnail">
-                <img src="http://i.imgur.com/w0VaQSX.png">
-            </div>
-            <div class="thumbnail">
-                <img src="http://i.imgur.com/zEYvCjN.png">
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="thumbnail">
-                <img src="http://i.imgur.com/WQJqs9C.png">
-            </div>
-            <div class="thumbnail">
-                <img src="http://i.imgur.com/gHyKCL7.png">
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="thumbnail">
-                <img src="http://i.imgur.com/3sJwJn5.png">
-            </div>
-        </div>
+   	    <h2>Game Rules Here</h2>
+               
     </div>
     <div class="learn-more">
 	  <div class="container">
@@ -83,7 +55,6 @@
 	    </div>
 	  </div>
 	</div>
-
-  </body>
-</html> 
+	</body>
+</html>
 
