@@ -15,13 +15,13 @@
    <div class="nav">
       <div class="container">
         <ul class="pull-left">
-          <li><a href="#">Home</a></li>
+          <li><a href="/index_kelsey.php">Home</a></li>
           <li><a href="#">About</a></li>
         </ul>
         <ul class="pull-right">
           <li><a href="#">Register</a></li>
           <li><a href="#">Log In</a></li>
-          <li><a href="#">FAQ</a></li>
+          <li><a href="/faq.php">FAQ</a></li>
         </ul>
       </div>
     </div>
@@ -73,7 +73,7 @@
 		 <div class="col-md-4">
 			<h3>Oppurtunities</h3>
 				<p>Want to be a mod? Provide site art? </p>
-				<p><a href="#">Apply to help out Chronic and WN</a></p>
+				<p><a href="/application.php">Apply to help out Chronic and WN</a></p>
 		  </div>
 		  <div="col-md-4">
 			<h3>Rules and Regulations</h3>
