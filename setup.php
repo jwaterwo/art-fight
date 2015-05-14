@@ -51,17 +51,14 @@
             */
             if ( empty($_POST["hostname"]) ) {
                 $ERROR="You did not enter a <b>hostname</b>.";
-                $STEP = "0";
                 break;
             }
             if ( empty($_POST["username"]) ) {
                 $ERROR="You did not enter a <b>username</b>.";
-                $STEP = "0";
                 break;
             }
             if ( empty($_POST["password"]) ) {
                 $ERROR="You did not enter a <b>password</b>.";
-                $STEP = "0";
                 break;
             }
 
@@ -97,6 +94,11 @@
         default:
             $STEP = "0";
             break;
+    }
+
+    // reset to the previous step upon error
+    if ( isset($ERROR) ){
+        $STEP--;
     }
 ?>
 
