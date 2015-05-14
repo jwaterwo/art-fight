@@ -56,6 +56,13 @@
                at this point.
                if we fail, set an error, else, move on
             */
+            $conn = mysqli_connect($_POST["hostname"], $_POST["username"], $_POST["password"]);
+            if (!$conn) {
+                $ERROR="We were unable to <b>connect</b> to the database.";
+                break;
+            }else{
+                $NOTICE="Connection to database <b>successfull</b>!";
+            }
 
             // Set the step to 1 so we can show the next page
             $STEP = "1";
@@ -82,6 +89,13 @@
         echo $ERROR;
         echo '</div>';
     }
+
+    // show any notices we want (successes)
+    if ( isset($NOTICE) ) {
+        echo '<div class="notice">';
+        echo $NOTICE;
+        echo '</div>';
+    }
 ?>
 
         <div class="setup_box">
@@ -90,7 +104,7 @@
                     <tr><td>MySQL Server Details</td></tr>
                     <tr><td><input type="text" name="hostname" placeholder="hostname"/></td></tr>
                     <tr><td><input type="text" name="username" placeholder="username"/></td></tr>
-                    <tr><td><input type="text" name="password" placeholder="password"/></td></tr>
+                    <tr><td><input type="password" name="password" placeholder="password"/></td></tr>
                     <tr><td><input type="submit" value="Submit"></td></tr>
                     <input type="hidden" name="step" value="1"/>
                 </form>
