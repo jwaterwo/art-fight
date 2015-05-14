@@ -1,0 +1,40 @@
+body {
+    font-family: "Century Gothic","Apple Gothic",AppleGothic,"URW Gothic L","Avant Garde",Futura,sans-serif;
+}
+
+img.banner {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.setup_text {
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.setup_box {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4px;
+    width: 350px;
+    text-align: center;
+    border: thin dashed black;
+    font-size: 14px;
+}
+
+.setup_box table {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
+    text-align: center;
+}
+
+.setup_box input {
+    font-size:12px;
+    padding:4px 2px;
+    border:solid 1px black;
+}

@@ -16,13 +16,16 @@
 
    <body>
 
-        <center>
-            <img src="artfight.png" alt="art-fight goes here" />
-            <p/>
+        <img src="artfight.png" alt="art-fight goes here" class="banner" />
+        <p/>
+
+        <div class="setup_text">
             <b>Welcome to the Art-Fight setup page.</b>
             <br/>
             Please fill out the below details to get started.
-            <p/>
+        </div>
+
+        <div class="setup_box">
             <table>
                 <form>
                     <tr><td>MySQL Server Details</td></tr>
@@ -33,7 +36,7 @@
                 </form>
             </table>
             Need help? Read <a href="https://github.com/jwaterwo/art-fight">this page</a>
-        </center>
+        </div>
 
     </body>
 </html>
